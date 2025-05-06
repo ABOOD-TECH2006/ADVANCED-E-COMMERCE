@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABOOD || SGIN UP PAGE</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link rel="stylesheet" href="./CSS/resposive.css" />
+    <link rel="stylesheet" href="./CSS/login_regs.css" />
+    <script type="text/javascript" src="./JAVA-SCRIPT/app.js" defer></script>
+    <link rel="icon" href="./img/icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- linking swiper js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body class="scroll-box">
+    <div class="preloader">
+      <img src="preloader.gif" alt="preloader" />
+    </div>
+    <div class="cart">
+      <div class="top_cart">
+        <h3 class="Cart_Items"><span class="count_item_cart">0</span></h3>
+        <sapn onclick="showingCart()" class="close_cart"
+          ><i class="fa-regular fa-circle-xmark"></i
+        ></sapn>
+      </div>
+      <div class="items_in_cart scroll-box" id="cart_items"></div>
+      <div class="bottom_cart">
+        <div class="total">
+          <p>subtotal</p>
+          <p class="price_cart_total">$0</p>
+        </div>
+        <div class="button_cart">
+          <a href="CheckOut.html" class="btn_cart CheckOut_btn">CheckOut</a>
+          <span onclick="showingCart()" class="btn_cart trans_bg">
+            Shop More
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="favorites_cart">
+      <div class="top_cart">
+        <h3><span id="favorites_cart_count">0</span></h3>
+        <span onclick="showingFavoritesCart()"
+          ><i class="fa-regular fa-circle-xmark"></i
+        ></span>
+      </div>
+      <div class="items_in_cart scroll-box" id="cart_Favorite_items">
+        <div class="item_cart" style="margin-top: 10px; display: flex">
+          <div class="image_name">
+            <img src="img/product/3.png" alt="" />
+          </div>
+          <div class="content">
+            <h4>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Inventore, mollitia.
+            </h4>
+            <p class="price_cart">$200</p>
+          </div>
+          <div class="favorite_icons">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <button class="delete_item">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+        </div>
+        <div
+          class="item_cart scroll-box"
+          style="margin-top: 10px; display: flex"
+        >
+          <div class="image_name">
+            <img src="img/product/3.png" alt="" />
+          </div>
+          <div class="content">
+            <h4>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Inventore, mollitia.
+            </h4>
+            <p class="price_cart">$200</p>
+          </div>
+          <div class="favorite_icons">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <button class="delete_item">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bottom_cart">
+        <div class="buttons_cart">
+          <button onclick="showingFavoritesCart()" class="CheckOut_btn">
+            <a style="width: 100%; height: 100%" href="#" id="sendAllFavorite"
+              >Add All Products To Cart</a
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+    <header>
+      <header style="z-index: 100">
+        <div class="top_header">
+          <div class="container">
+            <a href="#" class="logo"><img src="img/logo.png" alt="" /></a>
+            <form action="" class="search_box">
+              <div class="select_box">
+                <select id="category" name="category">
+                  <option value="All Categories">All Categories</option>
+                  <option value="Electronics & Digita">
+                    Electronics & Digita
+                  </option>
+                  <option value="Phones & Tablet">Phones & Tablety</option>
+                  <option value="Fashion & Clothings">
+                    Fashion & Clothings
+                  </option>
+                  <option value="Telivsion & Monitor">
+                    Telivsion & Monitor
+                  </option>
+                  <option value="Jewelry & Watches">Jewelry & Watches</option>
+                  <option value="Washing Machine">Washing Machine</option>
+                  <option value="Toys & Hobbies">Toys & Hobbies</option>
+                </select>
+              </div>
+              <input
+                type="text"
+                name="search"
+                placeholder="Search For Products"
+                required
+                id="search"
+              />
+              <button type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+            <div class="header-icons">
+              <div onclick="showingFavoritesCart()" class="icon">
+                <a href="#">
+                  <i class="fa-regular fa-heart"></i>
+                  <span class="count count_favourite">0</span>
+                </a>
+              </div>
+              <div onclick="showingCart()" class="icon">
+                <a href="#">
+                  <i class="fa-solid fa-cart-shopping" style="color: #000"></i>
+                  <span class="count count_item_header">0</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom_header">
+          <div class="container">
+            <nav class="nav">
+              <span onclick="open_meu_links()" class="open_menu"
+                ><i class="fa-solid fa-bars"></i
+              ></span>
+              <div class="category_nav">
+                <div onclick="showCategory()" class="category_btn">
+                  <i class="fa-solid fa-bars"></i>
+                  <p>Browse Category</p>
+                  <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="category__list">
+                  <a onclick="   showCategory()" href="#Hot_sales"
+                    >Top 10 Offers</a
+                  >
+                  <a onclick="   showCategory()" href="#"
+                    >Electronics & Digita</a
+                  >
+                  <a onclick="   showCategory()" href="#">Phones & Tablet</a>
+                  <a onclick="   showCategory()" href="#"
+                    >Fashion & Clothings</a
+                  >
+                  <a onclick="   showCategory()" href="#swiper_appliances"
+                    >Telivsion & Monitor</a
+                  >
+                  <a onclick="   showCategory()" href="#">Jewelry & Watches</a>
+                  <a onclick="   showCategory()" href="#">Toys & Hobbies</a>
+                </div>
+              </div>
+
+              <ul class="nav_links">
+                <span onclick="open_meu_links()" class="close_menu"
+                  ><i class="fa-regular fa-circle-xmark"></i
+                ></span>
+                <li onclick="open_meu_links()">
+                  <a data-id="0" href="index.html" class="active">Home</a>
+                </li>
+                <li onclick="open_meu_links()">
+                  <a data-id="0" href="#">About</a>
+                </li>
+                <li onclick="open_meu_links()">
+                  <a data-id="0" href="#">Accesories</a>
+                </li>
+                <li onclick="open_meu_links()">
+                  <a data-id="0" href="#">Blog</a>
+                </li>
+                <li onclick="open_meu_links()">
+                  <a data-id="0" href="#footer">Contact</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="log-in_sign-up btns">
+              <a class="btn regitration-login" href="index.html"
+                >HOME PAGE <i class="fa-solid fa-right-to-bracket"></i
+              ></a>
+              <a class="btn registration_sgin_up" href="login.html">
+                Login <i class="fa-solid fa-user-plus"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="bottom_header">
+        <div class="container">
+          <nav class="nav">
+            <h1 class="intro_phrase">
+              Step forth, brave soul—your journey begins now.
+            </h1>
+          </nav>
+          <div class="log-in_sign-up btns">
+            <a href="index.html" class="btn">HOME PAGE</a>
+            <a class="btn registration_login" href="login.html"
+              >LOGIN <i class="fa-solid fa-user-plus"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="signin sec_form">
+      <div class="form_container">
+        <p class="title">Welcome back</p>
+
+        <form action="" class="form">
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="password" />
+          <input type="password" placeholder="password" />
+
+          <button class="form-btn">sign up</button>
+        </form>
+
+        <p class="sign-up-label">
+          have an account? <a href="login.html" class="sign-up-link">Login</a>
+        </p>
+
+        <div class="buttons-container">
+          <div class="apple-login-buuton">
+            <i class="fa-brands fa-apple"></i>
+            <span>Sign UP with Apple</span>
+          </div>
+
+          <div class="google-login-button">
+            <i class="fa-brands fa-google"></i>
+            <span>Sign UP with Google</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="big_row">
+          <img src="img/FOOTER LOGO.png" alt="" class="logo_footer" />
+          <p>
+            An e-commerce website enables users to buy and sell products or
+            services online. It features secure payment options, user-friendly
+            navigation, product listings, and order tracking, providing a
+            seamless shopping experience accessible anytime, anywhere via the
+            internet.
+          </p>
+          <div class="icons_footer">
+            <a href="#"><i class="fa-solid fa-phone"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="row">
+          <h4>Find It Fast</h4>
+          <div class="links">
+            <a href="#"
+              ><i class="fa-solid fa-caret-right"></i>Laptops & Computers</a
+            >
+            <a href="#"
+              ><i class="fa-solid fa-caret-right"></i> Smart Phones & Tablets</a
+            >
+            <a href="#"><i class="fa-solid fa-caret-right"></i> TV & Audio</a>
+            <a href="#"><i class="fa-solid fa-caret-right"></i> Appliances</a>
+            <a href="#"
+              ><i class="fa-solid fa-caret-right"></i> Jewelry & Watches</a
+            >
+          </div>
+        </div>
+        <div class="row">
+          <h4>Quick Links</h4>
+
+          <div class="links">
+            <a href="#"
+              ><i class="fa-solid fa-caret-right"></i> Your Account
+            </a>
+            <a href="#"
+              ><i class="fa-solid fa-caret-right"></i> Returns & Exchanges</a
+            >
+            <a href="#"
+              ><i class="fa-solid fa-caret-right"></i> Shipping & Delivery</a
+            >
+            <a href="#"
+              ><i class="fa-solid fa-caret-right"></i> Estimated Delivery
+              Time</a
+            >
+            <a href="#"
+              ><i class="fa-solid fa-caret-right"></i> Purchase Hisotry</a
+            >
+          </div>
+        </div>
+
+        <div class="row">
+          <h4>Service us</h4>
+
+          <div class="links">
+            <a href="#"
+              ><i class="fa-solid fa-caret-right"></i> Support Center</a
+            >
+            <a href="#"
+              ><i class="fa-solid fa-caret-right"></i> Term & Conditions</a
+            >
+            <a href="#"
+              ><i class="fa-solid fa-caret-right"></i> Privacy Policy</a
+            >
+            <a href="#"><i class="fa-solid fa-caret-right"></i> Help</a>
+            <a href="#"><i class="fa-solid fa-caret-right"></i> FAQS</a>
+          </div>
+        </div>
+      </div>
+      <div class="bottom_footer">
+        <div class="container">
+          <p style="color: white">
+            &copy; <span>Abood Store</span> All Rights Reserved
+            <span id="date"></span>
+          </p>
+          <div class="payment_img">
+            <img src="img/payment_method.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/items.home.js"></script>
+  </body>
+</html>

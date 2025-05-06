@@ -1,0 +1,216 @@
+:root {
+  --main_color: #ff8716;
+  --p_color: #7b7b7b;
+  --bg_color: #f3f3f3;
+  --white_color: #fff;
+  --color_heading: #121416;
+  --border_color: #e5e5e5d5;
+  --Sale_color: #e51a1a;
+}
+/* ! the header area */
+header .bottom_header .nav_links .close_menu {
+  display: none;
+  color: red;
+  cursor: pointer;
+}
+.nav .open_menu {
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 1253px) {
+  .banner_4 .container {
+    flex-wrap: wrap;
+  }
+  .banner_4 .container .box {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1020px) {
+  body {
+    padding-top: 250px;
+  }
+  header .top_header .container {
+    flex-wrap: wrap;
+  }
+  header .top_header .search_box {
+    order: 3; /*? number 3 in flex wrap */
+    width: 100%; /*? auto for right and left 0 for the bottom */
+    margin: 20px auto 0;
+  }
+  header .top_header .logo {
+    width: 140px;
+  }
+  header .top_header .search_box .select_box {
+    width: 200px;
+  }
+  header .top_header .search_box input {
+    width: calc(100% - 200px);
+  }
+  header .bottom_header .nav_links {
+    position: fixed;
+    top: 0;
+    left: -405px;
+    bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    z-index: 10000000;
+    width: 400px;
+    padding-top: 100px;
+    border: 1px solid #b5b5b596;
+    transition: left 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  header .bottom_header .nav_links.open_menu_links {
+    left: 0;
+  }
+  header .bottom_header .nav_links li {
+    font-size: 18px;
+    height: auto;
+  }
+  header .bottom_header .nav_links .close_menu {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 30px;
+  }
+  header .bottom_header .container .nav .open_menu {
+    display: block;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 180px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    border-radius: 5px;
+    border: 2px solid var(--main_color);
+  }
+  header .bottom_header .category_nav {
+    width: auto;
+  }
+  header .bottom_header .category_nav .category_btn p {
+    font-size: 13px;
+    margin: 0 10px;
+  }
+  .slider .banner_2 {
+    display: none;
+  }
+  .slider .container .swiper-swp {
+    width: 100%;
+  }
+}
+@media (max-width: 1019px) {
+  header .bottom_header .category_nav .category_nav_list {
+    width: 115.5%;
+  }
+}
+@media (max-width: 860px) {
+  header .bottom_header .category_nav {
+    width: 100px;
+    height: 80%;
+    left: 25px;
+  }
+  header .bottom_header .category_nav .category_nav_list {
+    width: 118.5%;
+  }
+}
+@media (max-width: 843px) {
+  footer .container .big_row {
+    width: 40%;
+  }
+  footer .container .row h4 {
+    font-size: 18px;
+  }
+  footer .container .row .links a {
+    font-size: 14px;
+  }
+  footer .container .row {
+    margin-top: 30px;
+    width: 45%;
+  }
+  .banners .banner_boxes {
+    flex-wrap: wrap;
+  }
+  .banners .banner_boxes.banner_3_image .box {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+  .banners .banner_boxes .box{
+   width: 95%;
+   margin-bottom: 20px;
+  }
+}
+@media (max-width: 700px) {
+  .banner_4 .container .box {
+    width: 100%;
+    justify-content: space-between;
+  }
+    .checkout .container{
+    flex-direction: column;
+  }
+  
+  .checkout .order_summary,.checkout .input_info{
+    width: 90%;
+  }
+  /* .checkout .input_info label{
+    left: -40px;
+  }
+  .checkout .input_info input{
+    width: 120%;
+  } */
+}
+
+@media (max-width: 500px) {
+  .product .img_product{
+    width: 120px;
+  }
+   header .top_header .search_box .select_box{
+      width: 100px;
+   }
+   header .top_header .search_box input{
+      width: calc(100% - 100px);
+   }
+  .banners .banner_boxes.banner_3_image .box {
+    width: 100%;
+  }
+
+  header .bottom_header .category_nav {
+    left: 25px;
+  }
+  header .bottom_header .nav_links.open_menu_links {
+    width: 100%;
+  }
+  header .top_header .search_box .select_box {
+    width: 200px;
+  }
+  .cart {
+    width: 88%;
+    right: -130%;
+  }
+  header .bottom_header .category_nav {
+    display: none;
+  }
+  header .top_header .search_box input {
+    width: calc(100% - 200px);
+  }
+
+  
+}
+@media (max-width: 368px) {
+  header .bottom_header .category_nav {
+    width: 100px;
+  }
+  header .bottom_header .category_nav .category_nav_list {
+    width: 128%;
+  }
+}
+@media (max-width:320px) {
+  .btns{
+    transform: translateX(20px);
+  }
+}
